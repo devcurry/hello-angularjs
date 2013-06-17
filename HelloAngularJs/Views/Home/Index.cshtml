@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Hello AngularJS";
+}
+
+<div ng-app>
+    <!-- More Goodness Coming -->
+    <div ng-controller="indexController">
+        <h3>
+            <ng-pluralize count="tweets.length" when="newTweets"></ng-pluralize>
+        </h3>
+        <table class="table table-striped">
+            <tr ng-repeat="item in tweets">
+                <td>
+                    <img src="{{item.ImageUrl}}" />
+                </td>
+                <td>
+                    
+                    <strong>{{item.ScreenName}}</strong> <br />
+                    {{item.Tweet}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
